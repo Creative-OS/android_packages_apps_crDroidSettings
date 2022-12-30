@@ -72,7 +72,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String KEY_PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
     private static final String KEY_PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
     private static final String KEY_PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
-    private static final String KEY_PREF_BATTERY_ESTIMATE = "qs_show_battery_estimate";
     private static final String KEY_QS_PANEL_STYLE  = "qs_panel_style";
 
     private Handler mHandler;
@@ -128,12 +127,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         int tileAnimationStyle = Settings.System.getIntForUser(resolver,
                 Settings.System.QS_TILE_ANIMATION_STYLE, 0, UserHandle.USER_CURRENT);
         updateAnimTileStyle(tileAnimationStyle);
-
-        boolean turboInstalled = Utils.isPackageInstalled(getContext(),
-                "com.google.android.apps.turbo");
-        mBatteryEstimate = findPreference(KEY_PREF_BATTERY_ESTIMATE);
-        if (!turboInstalled)
-            prefScreen.removePreference(mBatteryEstimate);
     }
 
     private CustomSettingsObserver mCustomSettingsObserver = new CustomSettingsObserver(mHandler);
@@ -306,12 +299,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     List<String> keys = super.getNonIndexableKeys(context);
-
-                    boolean turboInstalled = Utils.isPackageInstalled(context,
-                            "com.google.android.apps.turbo");
-
-                    if (!turboInstalled)
-                        keys.add(KEY_PREF_BATTERY_ESTIMATE);
 
                     return keys;
                 }
