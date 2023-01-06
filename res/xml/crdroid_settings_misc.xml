@@ -111,6 +111,6 @@
         android:icon="@drawable/ic_weather"
         android:title="@string/qs_weather_settings_title"
         android:summary="@string/qs_weather_settings_summary"
-        android:fragment="com.crdroid.settings.fragments.OmniJawsSettings" />
+        android:fragment="com.crdroid.settings.fragments.misc.OmniJawsSettings" />
 
 </PreferenceScreen>

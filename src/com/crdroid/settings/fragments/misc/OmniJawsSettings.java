@@ -16,7 +16,7 @@
  *
 */
 
-package com.crdroid.settings.fragments;
+package com.crdroid.settings.fragments.misc;
 
 import android.content.Context;
 import android.content.Intent;
