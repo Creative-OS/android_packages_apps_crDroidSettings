@@ -67,7 +67,7 @@
     <!-- Sites riceDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Vi elsker open source, tjek os ud</string>
-    <string name="crdroid_telegram_title">riceDroid community</string>
+    <string name="crdroid_telegram_title">riceDroid Pixel community</string>
     <string name="crdroid_telegram_summary">Vi er på telegram. Tilmeld dig!</string>
     <string name="crdroid_telegram_channel_title">Updates channel</string>
     <string name="crdroid_telegram_channel_summary">Get notified of new builds on Telegram</string>

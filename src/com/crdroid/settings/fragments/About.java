@@ -79,7 +79,7 @@ public class About extends SettingsPreferenceFragment {
         } else if (preference == mSourceUrl) {
             launchUrl("https://github.com/ricedroidOSS");
         } else if (preference == mTelegramUrl) {
-            launchUrl("https://t.me/riceDroidNews");
+            launchUrl("https://t.me/CreativeRaviole");
         } else if (preference == mShare) {
             Intent intent = new Intent();
             intent.setAction(Intent.ACTION_SEND);
